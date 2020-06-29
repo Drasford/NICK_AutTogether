@@ -1,0 +1,21 @@
+<h1>Excercise lessons</h1>
+<!-- <ul *ngFor="let video of videos">
+    <div>
+        <iframe class="e2e-iframe-trusted-src" width="640" height="390" [src]="('https://www.youtube.com/embed/'+ video.snippet.resourceId.videoId) | safe"></iframe>
+        {{video.snippet.title}}
+    </div>
+</ul> -->
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let video of videos" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{video.snippet.title}}
+        </mat-panel-title>
+        <mat-panel-description>
+          <img width="100" src="{{video.snippet.thumbnails.default.url}}">
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <iframe class="e2e-iframe-trusted-src" width="640" height="390" [src]="('https://www.youtube.com/embed/'+ video.snippet.resourceId.videoId) | safe"></iframe>
+    </mat-expansion-panel>
+  </mat-accordion>
+  
