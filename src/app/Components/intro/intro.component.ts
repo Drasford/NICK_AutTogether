@@ -8,7 +8,7 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser
 })
 export class IntroComponent {
 
-  videos:any;
+  
   panelOpenState = false;
   tabColor ="#ba014b"
 

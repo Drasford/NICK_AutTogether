@@ -46,8 +46,7 @@ const routes=[
       },
       {
         path:'excercise',
-        component:ExercisesComponent,
-        canActivate:[AuthGuard]
+        component:ExercisesComponent
       }
     ]
   },

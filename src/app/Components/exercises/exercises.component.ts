@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { YoutubeService } from './../../services/youtube.service';
+import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-exercises',
@@ -6,10 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exercises.component.css']
 })
 export class ExercisesComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  
+  videos:any;
+ 
+  constructor(private youtube:YoutubeService, private sanitizer:DomSanitizer) {
   }
+
+ ngOnInit(): void {
+   // this.youtube.getPlaylist().subscribe((data)=>{
+   //   console.log(data);
+   //   this.videos = data.items;
+   // });
+   
+ }
 
 }
