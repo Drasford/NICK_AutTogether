@@ -3,3 +3,32 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-expansion-panel-header { height: 200px !important;}
+.mat-tab-group {width: 600px !important;}
+
+#logo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    bottom: 45px;
+    left: 30px;
+}
+
+#changeMe{
+    font-size: 50px;
+}
+
+.tabContent{
+    height: 400px;
+}
+
+#circleColor{
+    width: 100px;
+    height: 100px;
+    display: inline-flex;
+    border-radius: 50%;
+    position: relative;
+    top:30px;
+    left:10px;
+}
