@@ -6,21 +6,22 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser
   templateUrl: './intro.component.html',
   styleUrls: ['./intro.component.css']
 })
-export class IntroComponent implements OnInit {
+export class IntroComponent {
 
   videos:any;
   panelOpenState = false;
+  tabColor ="#ba014b"
 
   constructor(private youtube:YoutubeService, private sanitizer:DomSanitizer) {
    }
 
-  ngOnInit(): void {
-    this.youtube.getPlaylist().subscribe((data)=>{
-      console.log(data);
-      this.videos = data.items;
-    });
+  // ngOnInit(): void {
+  //   // this.youtube.getPlaylist().subscribe((data)=>{
+  //   //   console.log(data);
+  //   //   this.videos = data.items;
+  //   // });
     
-  }
+  // }
 
 
 }

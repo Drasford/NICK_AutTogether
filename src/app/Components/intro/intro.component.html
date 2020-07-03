@@ -1,21 +1,48 @@
-<h1>Excercise lessons</h1>
-<!-- <ul *ngFor="let video of videos">
-    <div>
-        <iframe class="e2e-iframe-trusted-src" width="640" height="390" [src]="('https://www.youtube.com/embed/'+ video.snippet.resourceId.videoId) | safe"></iframe>
-        {{video.snippet.title}}
+<img src="./../assets/img/aut-logo.png" id="logo">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm">
+      <div>
+        <h1 style="font-size: 40px;">Welcome to AutTogether</h1>
+        <h2 style="opacity: 0.5; font-style: italic;">What can you expect from us?</h2>
+      </div>
+      
+      <div>
+        <mat-tab-group mat-align-tabs="start" dynamicHeight>
+          <mat-tab label="Adaptible">
+            <div style="position: relative; top: 30px; font-size: 20px;">
+              <p>Fully customizable interface</p>
+            </div>
+            <div class="tabContent">
+            <span 
+            id="changeMe"
+            [style.color]="tabColor"
+          [cpPosition]="'bottom'"
+          [cpPositionOffset]="'50%'"
+          [cpPositionRelativeToArrow]="true"
+          [(colorPicker)]="tabColor">Change me!
+          </span>
+          <span id="circleColor" [style.background]="tabColor">
+          </span>
+         
+        </div>
+          </mat-tab>
+          <mat-tab label="Caring">
+            <div style="position: relative; top: 30px; font-size: 20px; height: 300px;">
+              <p>We keep up with all the latest trends and update our contents daily !</p>
+            </div>
+          </mat-tab>
+          <mat-tab label="Placeholder">Placeholder for user experience cards</mat-tab>
+        </mat-tab-group>
+      </div> 
     </div>
-</ul> -->
-<mat-accordion>
-    <mat-expansion-panel *ngFor="let video of videos" hideToggle>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          {{video.snippet.title}}
-        </mat-panel-title>
-        <mat-panel-description>
-          <img width="100" src="{{video.snippet.thumbnails.default.url}}">
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <iframe class="e2e-iframe-trusted-src" width="640" height="390" [src]="('https://www.youtube.com/embed/'+ video.snippet.resourceId.videoId) | safe"></iframe>
-    </mat-expansion-panel>
-  </mat-accordion>
+
+    <div class="col-sm justify-content-center">
+        <app-login></app-login>
+     </div>
+  </div>
+</div>
+<!-- <div style="position: relative; left: 50px; bottom: 40px;"> 
   
+</div> -->
+
