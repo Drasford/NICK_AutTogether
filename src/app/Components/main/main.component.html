@@ -9,10 +9,9 @@
             <li class="nav-item active">
                 <a class="nav-link" [routerLink]="['/main']">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <span [style.color]="tabColor" [cpPosition]="'bottom'" [cpPositionOffset]="'50%'"
-                    [cpPositionRelativeToArrow]="true" [(colorPicker)]="tabColor">Change me!
-                </span>
+            <li>
+               <a class="nav-link font-weight-bold" [style.color]="colorService.backgroundColor" [cpPosition]="'bottom'" [cpPositionOffset]="'50%'"
+                [cpPositionRelativeToArrow]="true" [(colorPicker)]="colorService.backgroundColor">Change me!</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
@@ -35,7 +34,7 @@
         </span>
     </div>
 </nav>
-<div class="container-fluid">
+<div class="container-fluid h-100" [style.background]="colorService.backgroundColor">
     <div class="row pt-5">
         <div class="col-sm-4">
             <div class="card">

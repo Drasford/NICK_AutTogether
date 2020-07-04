@@ -4,14 +4,14 @@
         <form (ngSubmit)="login()">
         <h3>Firebase Login</h3>
         <div class="form-group p-2">
-        <input type="email" name="email" class="form-control" [(ngModel)]="email" placeholder="Enter email Id" required>
+        <input type="email" name="email" class="form-control" [(ngModel)]="email" placeholder="Enter email" required>
     </div>
     <div class="form-group p-2">
-        <input type="password" name="password" class="form-control" [(ngModel)]="password" placeholder="Enter Password" required>
+        <input type="password" name="password" class="form-control" [(ngModel)]="password" placeholder="Enter password" required>
     </div>
     <div class="form-group p-2">
         <button type="submit" class="btn btn-primary">Login</button>
-        <div class="register"><a href="#" routerLink="/register">New User Register</a></div>
+        <div class="register pt-2"><a  routerLink="/register">New user ? Register now !</a></div>
     </div>
     </form>
     <div class="form-group">

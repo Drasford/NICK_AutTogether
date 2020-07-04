@@ -9,6 +9,10 @@
         <li class="nav-item active">
           <a class="nav-link" [routerLink]="['/main']">Home <span class="sr-only">(current)</span></a>
         </li>
+        <li>
+          <a class="nav-link font-weight-bold" [style.color]="colorService.backgroundColor" [cpPosition]="'bottom'" [cpPositionOffset]="'50%'"
+           [cpPositionRelativeToArrow]="true" [(colorPicker)]="colorService.backgroundColor">Change me!</a>
+       </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Lessons
@@ -27,8 +31,27 @@
         <button class="btn btn-large btn-danger" (click)='authService.signOut()'>Log Out</button>
     </span>
   </nav>
-
-
+<div class="container-fluid h-100" [style.background]="colorService.backgroundColor">
+  <div class="row p-5">
+    <div class="card w-100">
+      <div class="row no-gutters">
+        <div class="col-md-6">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 
 <h1>Exercise Lessons :D</h1>
 <mat-accordion>
     <mat-expansion-panel *ngFor="let video of videos" hideToggle>
@@ -42,5 +65,5 @@
       </mat-expansion-panel-header>
       <iframe class="e2e-iframe-trusted-src" width="640" height="390" [src]="('https://www.youtube.com/embed/'+ video.snippet.resourceId.videoId) | safe"></iframe>
     </mat-expansion-panel>
-  </mat-accordion>
+  </mat-accordion> -->
   

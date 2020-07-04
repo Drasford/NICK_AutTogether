@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { YoutubeService } from './../../services/youtube.service';
 import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
+import {ColorService} from '../../services/color.service';
 @Component({
   selector: 'app-intro',
   templateUrl: './intro.component.html',
@@ -10,9 +11,9 @@ export class IntroComponent {
 
   
   panelOpenState = false;
-  tabColor ="#ba014b"
+  // tabColor ="#ba014b"
 
-  constructor(private youtube:YoutubeService, private sanitizer:DomSanitizer) {
+  constructor(private youtube:YoutubeService, private sanitizer:DomSanitizer,public colorService:ColorService) {
    }
 
   // ngOnInit(): void {

@@ -16,13 +16,13 @@
             <div class="tabContent">
             <span 
             id="changeMe"
-            [style.color]="tabColor"
+            [style.color]="colorService.backgroundColor"
           [cpPosition]="'bottom'"
           [cpPositionOffset]="'50%'"
           [cpPositionRelativeToArrow]="true"
-          [(colorPicker)]="tabColor">Change me!
+          [(colorPicker)]="colorService.backgroundColor">Change me!
           </span>
-          <span id="circleColor" [style.background]="tabColor">
+          <span id="circleColor" [style.background]="colorService.backgroundColor">
           </span>
          
         </div>

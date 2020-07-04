@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from './../../services/auth.service';
-
+import {ColorService} from './../../services/color.service';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -8,9 +8,9 @@ import {AuthService} from './../../services/auth.service';
 })
 export class MainComponent implements OnInit {
 
-  tabColor="#ba014b";
+  // tabColor="#ba014b";
 
-  constructor(public authService:AuthService) { }
+  constructor(public authService:AuthService,public colorService: ColorService) { }
 
   ngOnInit(): void {
     console.log(this.authService)
