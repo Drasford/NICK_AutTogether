@@ -9,6 +9,8 @@ import { auth } from 'firebase';
 export class AuthService {
 
   authState:any = null;
+  isAuth:boolean = false;
+  isTrulyAuth:boolean = false;
 
   constructor(private afu: AngularFireAuth,private router:Router) {
     this.afu.authState.subscribe((auth=>{
@@ -56,6 +58,7 @@ export class AuthService {
 
    loginWithEmail(email:string,password:string){
      return this.afu.signInWithEmailAndPassword(email,password).then((user)=>{
+       localStorage.setItem('Authenticated','Bla');
       this.authState = user
      }).catch(error=>{
        console.log(error);
@@ -65,6 +68,7 @@ export class AuthService {
 
    signOut(): void{
      this.afu.signOut();
+     localStorage.clear();
      this.router.navigate(['']);
    }
 }

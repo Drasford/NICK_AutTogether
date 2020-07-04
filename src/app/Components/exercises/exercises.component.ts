@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { YoutubeService } from './../../services/youtube.service';
 import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
+import { AuthService } from 'app/services/auth.service';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class ExercisesComponent implements OnInit {
   
   videos:any;
  
-  constructor(private youtube:YoutubeService, private sanitizer:DomSanitizer) {
+  constructor(private youtube:YoutubeService, private sanitizer:DomSanitizer,public authService:AuthService) {
   }
 
  ngOnInit(): void {
@@ -20,7 +21,7 @@ export class ExercisesComponent implements OnInit {
    //   console.log(data);
    //   this.videos = data.items;
    // });
-   
+   console.log(this.authService)
  }
 
 }

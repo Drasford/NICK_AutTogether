@@ -26,11 +26,13 @@ import { RegisterComponent } from './Components/register/register.component';
 import { LoginComponent } from './Components/login/login.component';
 
 import {AuthGuard} from './Guards/auth.guard';
+import { ChildGuard } from './Guards/child.guard';
 
 const routes=[
   {
     path:'',
-    component:IntroComponent
+    component:IntroComponent,
+    canActivate:[ChildGuard]
   },
   {
     path:'register',
@@ -45,8 +47,9 @@ const routes=[
         canActivate:[AuthGuard]
       },
       {
-        path:'excercise',
-        component:ExercisesComponent
+        path:'exercise',
+        component:ExercisesComponent,
+        canActivate:[AuthGuard]
       }
     ]
   },
@@ -82,7 +85,8 @@ const routes=[
     FormsModule
   ],
   providers: [
-    AuthGuard
+    AuthGuard,
+    ChildGuard
   ],
   bootstrap: [AppComponent]
 })

@@ -8,9 +8,12 @@ import {AuthService} from './../../services/auth.service';
 })
 export class MainComponent implements OnInit {
 
+  tabColor="#ba014b";
+
   constructor(public authService:AuthService) { }
 
   ngOnInit(): void {
+    console.log(this.authService)
   }
 
 }

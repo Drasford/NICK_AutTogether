@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   password = "";
   errorMessage = ''; 
   error: { name: string, message: string } = { name: '', message: '' }; 
+  
 
   constructor(private authService: AuthService, private router: Router) { }
   ngOnInit(): void {
@@ -29,7 +30,9 @@ export class LoginComponent implements OnInit {
     if (this.validateForm(this.email, this.password)) {
       this.authService.loginWithEmail(this.email, this.password)
         .then(() => {
+          this.authService.isAuth = true;
          this.router.navigate(['/main'])
+        console.log(this.authService)
         }).catch(_error => {
           this.error = _error
           this.router.navigate([''])
@@ -49,7 +52,7 @@ export class LoginComponent implements OnInit {
     }
 
     if (password.lenght < 6) {
-      this.errorMessage = "password should be at least 6 char";
+      this.errorMessage = "password should be at least 6 characters";
       return false;
     }
 

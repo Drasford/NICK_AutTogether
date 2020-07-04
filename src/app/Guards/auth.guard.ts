@@ -15,12 +15,15 @@ export class AuthGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    
-      if(this.authService.authenticated){return true;}
-
-      alert('access denied bratuuuuu :)');
-      this.router.navigate(['']);
-      return false;
+      
+      if(this.authService.authenticated || localStorage.getItem('Authenticated')){return true;}
+      else{
+        alert('access denied bratuuuuu :)');
+        this.router.navigate(['']);
+        console.log(this.authService);
+        return false;
+      }
+     
   }
   
 }
