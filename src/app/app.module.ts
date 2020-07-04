@@ -27,6 +27,7 @@ import { LoginComponent } from './Components/login/login.component';
 
 import {AuthGuard} from './Guards/auth.guard';
 import { ChildGuard } from './Guards/child.guard';
+import { DynamicComponent } from './Components/dynamic/dynamic.component';
 
 const routes=[
   {
@@ -50,6 +51,11 @@ const routes=[
         path:'exercise',
         component:ExercisesComponent,
         canActivate:[AuthGuard]
+      },
+      {
+        path:'dynamic',
+        component:DynamicComponent,
+        canActivate:[AuthGuard]
       }
     ]
   },
@@ -68,7 +74,8 @@ const routes=[
     MainComponent,
     ExercisesComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    DynamicComponent
     
   ],
   imports: [

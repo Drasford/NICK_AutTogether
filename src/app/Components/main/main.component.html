@@ -20,7 +20,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" [routerLink]="['/main/exercise']">Exercises</a>
-                    <a class="dropdown-item">Another action</a>
+                    <a class="dropdown-item" [routerLink]="['/main/dynamic']"> Dynamic action</a>
                     <a class="dropdown-item">Something else here</a>
                 </div>
             </li>
@@ -47,19 +47,19 @@
         </div>
         <div class="col-sm-4">
             <div class="card">
-                <h4 class="card-header">Teaching lessons</h4>
+                <h4 class="card-header">Dynamic lessons</h4>
                 <div class="card-body">
                     <p class="card-text">Providing the best teaching lessons for your child.</p>
-                    <a [routerLink]="['/main/exercise']" class="btn btn-primary">Go to lessons</a>
+                    <a [routerLink]="['/main/dynamic']" class="btn btn-primary">Go to lessons</a>
                 </div>
             </div>
         </div>
         <div class="col-sm-4">
             <div class="card">
-                <h4 class="card-header">Placeholder lessons</h4>
+                <h4 class="card-header">Quiz</h4>
                 <div class="card-body">
                     <p class="card-text">Providing the best placeholder lessons for your child.</p>
-                    <a [routerLink]="['/main/exercise']" class="btn btn-primary">Go to lessons</a>
+                    <a [routerLink]="['/main/exercise']" class="btn btn-primary">Go to quiz</a>
                 </div>
             </div>
         </div>

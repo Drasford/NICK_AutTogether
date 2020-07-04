@@ -7,5 +7,5 @@ export class ColorService {
 
   constructor() { }
 
-  backgroundColor = "#ba014b";
+  backgroundColor = "#b4a2a9";
 }

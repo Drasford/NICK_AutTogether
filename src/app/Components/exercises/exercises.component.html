@@ -19,7 +19,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" [routerLink]="['/main/exercise']">Exercises</a>
-              <a class="dropdown-item" >Another action</a>
+              <a class="dropdown-item" [routerLink]="['/main/dynamic']">Dynamic action</a>
               <a class="dropdown-item" >Something else here</a>
             </div>
           </li>
@@ -31,39 +31,79 @@
         <button class="btn btn-large btn-danger" (click)='authService.signOut()'>Log Out</button>
     </span>
   </nav>
-<div class="container-fluid h-100" [style.background]="colorService.backgroundColor">
+<div class="container-fluid h-100%" [style.background]="colorService.backgroundColor">
   <div class="row p-5">
     <div class="card w-100">
       <div class="row no-gutters">
-        <div class="col-md-6">
+        <div class="col-md-6 d-flex align-items-center">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h3 class="card-title">Lesson #1 Fitness exercise as a Sensory Break</h3>
+            <p class="card-text">Champion Dylan, who has autism, and Coach Ashley show exercises that can be done in a classroom, at home, or in a physical education class.
+              NCHPAD (National Center on Health, Physical Activity and Disability) is the nation’s premier center in promoting the health and wellness of people with disability.</p>
           </div>
         </div>
         <div class="col-md-6">
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1_SDT-a8FNM" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row p-5">
+    <div class="card w-100">
+      <div class="row no-gutters">
+        <div class="col-md-6 d-flex align-items-center">
+          <div class="card-body">
+            <h3 class="card-title">Lesson #2 Fitness exercises to improve posture</h3>
+            <p class="card-text">Champion Anthony shares with you fitness activities that can help your children or students with autism improve their posture.
+              NCHPAD (National Center on Health, Physical Activity and Disability) is the nation’s premier center in promoting the health and wellness of people with disability.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/orREX_55Epc" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row p-5">
+    <div class="card w-100">
+      <div class="row no-gutters">
+        <div class="col-md-6 d-flex align-items-center">
+          <div class="card-body">
+            <h3 class="card-title">Lesson #3 Fitness exercises to help calm the body</h3>
+            <p class="card-text">Champion Rachel shares how the stability ball can help to calm the body or any anxiety for individuals with autism spectrum disorders. She compares the activities to using a squeeze machine!
+              NCHPAD (National Center on Health, Physical Activity and Disability) is the nation’s premier center in promoting the health and wellness of people with disability.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SfJiYVgyfvI" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row p-5">
+    <div class="card w-100">
+      <div class="row no-gutters">
+        <div class="col-md-6 d-flex align-items-center">
+          <div class="card-body">
+            <h3 class="card-title">Lesson #4 Fitness exercises to help coordination</h3>
+            <p class="card-text">Champion Brody, an adolescent diagnosed with autism, exercises using a foam roller and the support of a visual schedule. Watch him stay on task and have success during a fitness routine.
+              NCHPAD (National Center on Health, Physical Activity and Disability) is the nation’s premier center in promoting the health and wellness of people with disability.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/l68DaXPuyQ0" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- 
-<h1>Exercise Lessons :D</h1>
-<mat-accordion>
-    <mat-expansion-panel *ngFor="let video of videos" hideToggle>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          {{video.snippet.title}}
-        </mat-panel-title>
-        <mat-panel-description>
-          <img width="100" src="{{video.snippet.thumbnails.default.url}}">
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <iframe class="e2e-iframe-trusted-src" width="640" height="390" [src]="('https://www.youtube.com/embed/'+ video.snippet.resourceId.videoId) | safe"></iframe>
-    </mat-expansion-panel>
-  </mat-accordion> -->
+
   
