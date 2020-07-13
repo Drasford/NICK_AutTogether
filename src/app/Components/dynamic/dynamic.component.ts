@@ -17,10 +17,10 @@ export class DynamicComponent implements OnInit {
   constructor(private youtube:YoutubeService, private sanitizer:DomSanitizer, public colorService:ColorService, public authService:AuthService) { }
 
    ngOnInit(): void {
-    this.youtube.getPlaylist().subscribe((data)=>{
-      console.log(data);
-      this.videos = data.items;
-    });
+    // this.youtube.getPlaylist().subscribe((data)=>{
+    //   console.log(data);
+    //   this.videos = data.items;
+    // });
   }
 
 }

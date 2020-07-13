@@ -20,11 +20,14 @@
                     Lessons
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" [routerLink]="['/main/exercise']">Exercises</a>
-                    <a class="dropdown-item" [routerLink]="['/main/dynamic']">Dynamic action</a>
+                    <a class="dropdown-item" [routerLink]="['/main/exercise']">Educate yourself</a>
+                    <a class="dropdown-item" [routerLink]="['/main/dynamic']">Exercise lessons</a>
                     <a class="dropdown-item">Something else here</a>
                 </div>
             </li>
+            <li class="nav-item active">
+              <a class="nav-link" [routerLink]="['/main/chatroom']">Chatroom</a>
+          </li>
         </ul>
     </div>
     <span>
@@ -34,17 +37,13 @@
     </span>
 </nav>
 <div class="fluid-container h-100%" [style.background]="colorService.backgroundColor">
-    <div>
-        <h1>Dynamic</h1>
-    </div>
     <div class="row p-5" *ngFor="let video of videos; let i = index">
         <div class="card w-100">
           <div class="row no-gutters">
             <div class="col-md-6 d-flex align-items-center">
               <div class="card-body">
                 <h3 class="card-title">Lesson #{{i+1}} {{video.snippet.title}}</h3>
-                <p class="card-text">Champion Dylan, who has autism, and Coach Ashley show exercises that can be done in a classroom, at home, or in a physical education class.
-                  NCHPAD (National Center on Health, Physical Activity and Disability) is the nation’s premier center in promoting the health and wellness of people with disability.</p>
+                <p class="card-text">{{video.snippet.description}}</p>
               </div>
             </div>
             <div class="col-md-6">

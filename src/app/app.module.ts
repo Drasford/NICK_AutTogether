@@ -28,6 +28,7 @@ import { LoginComponent } from './Components/login/login.component';
 import {AuthGuard} from './Guards/auth.guard';
 import { ChildGuard } from './Guards/child.guard';
 import { DynamicComponent } from './Components/dynamic/dynamic.component';
+import { ChatroomComponent } from './Components/chatroom/chatroom.component';
 
 const routes=[
   {
@@ -56,6 +57,11 @@ const routes=[
         path:'dynamic',
         component:DynamicComponent,
         canActivate:[AuthGuard]
+      },
+      {
+        path:'chatroom',
+        component:ChatroomComponent,
+        canActivate:[AuthGuard]
       }
     ]
   },
@@ -75,7 +81,8 @@ const routes=[
     ExercisesComponent,
     RegisterComponent,
     LoginComponent,
-    DynamicComponent
+    DynamicComponent,
+    ChatroomComponent
     
   ],
   imports: [
