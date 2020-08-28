@@ -1,50 +1,26 @@
 
-<div class="container-fluid">
-  <div class="row">
-  <img src="./../assets/img/aut-logo.png" id="logo">
-  </div>
-  <div class="row">
-    <div class="col-sm">
-      <div>
-        <h1 style="font-size: 40px;">Welcome to AutTogether</h1>
-        <h2 style="opacity: 0.5; font-style: italic;">What can you expect from us?</h2>
-      </div>     
-      <div>
-        <mat-tab-group mat-align-tabs="start" dynamicHeight>
-          <mat-tab label="Adaptible">
-            <div style="position: relative; top: 30px; font-size: 20px;">
-              <p>Fully customizable interface</p>
-            </div>
-            <div class="tabContent">
-            <span 
-            id="changeMe"
-            [style.color]="colorService.backgroundColor"
-          [cpPosition]="'bottom'"
-          [cpPositionOffset]="'50%'"
-          [cpPositionRelativeToArrow]="true"
-          [(colorPicker)]="colorService.backgroundColor">Change me!
-          </span>
-          <span id="circleColor" [style.background]="colorService.backgroundColor">
-          </span>
-         
-        </div>
-          </mat-tab>
-          <mat-tab label="Caring">
-            <div style="position: relative; top: 30px; font-size: 20px; height: 300px;">
-              <p>We keep up with all the latest trends and update our contents daily !</p>
-            </div>
-          </mat-tab>
-          <mat-tab label="Placeholder">Placeholder for user experience cards</mat-tab>
-        </mat-tab-group>
-      </div> 
+<div class="container-fluid h-100" [style.background]="colorService.backgroundColor">
+  <div class="row justify-content-md-center">
+    <div class="col-sm-2 mt-5">
+      <img src="./../assets/img/aut-logo.png" id="logo">
+    </div > 
+    <div class="col-sm-3 pl-3" style="margin-top:70px">
+        <h1 style="font-size: 40px;"><span class="bg-light">Welcome to AutTogether</span></h1>
+        <h2 style="opacity: 0.5; font-style: italic;"><span class="bg-light">What can you expect from us? </span></h2>
     </div>
-
-    <div class="col-sm">
-        <app-login></app-login>
-     </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col-sm-5  p-4">
+      <div class="tabContent inline-block text-center" style="border-radius: 50%;">
+        <span  class="btn btn-light" id="changeMe" [cpPosition]="'bottom'" [cpPositionOffset]="'50%'" [cpPositionRelativeToArrow]="true" [(colorPicker)]="colorService.backgroundColor">Change me!</span>
+        <span  id="circleColor" [style.background]="colorService.backgroundColor"></span>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col-sm-5  bg-light">
+      <app-login></app-login>
+    </div>  
   </div>
 </div>
-<!-- <div style="position: relative; left: 50px; bottom: 40px;"> 
-  
-</div> -->
 

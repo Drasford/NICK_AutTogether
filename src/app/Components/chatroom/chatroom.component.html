@@ -32,7 +32,7 @@
     </div>
     <span>
         Welcome
-        {{authService.currentUserName}}
+        <a [routerLink]="['/profile']">{{authService.currentUserName}}</a>
         <button class="btn btn-large btn-danger" (click)='authService.signOut()'>Log Out</button>
     </span>
 </nav>
@@ -141,3 +141,5 @@
             </div>
           </div>
           </div>
+  </div>
+  </div>

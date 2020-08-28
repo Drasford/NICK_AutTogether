@@ -32,7 +32,7 @@
     <div class="d-flex justify-content-right">
         <span>
             Welcome
-            {{authService.currentUserName}}
+            <a [routerLink]="['/profile']">{{authService.currentUserName}}</a>
             <button class="btn btn-large btn-danger" (click)='authService.signOut()'>Log Out</button>
         </span>
     </div>
