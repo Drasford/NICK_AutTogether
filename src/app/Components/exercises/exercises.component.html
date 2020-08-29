@@ -18,57 +18,100 @@
               Lessons
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" [routerLink]="['/main/exercise']">Exercises</a>
-              <a class="dropdown-item" [routerLink]="['/main/dynamic']">Dynamic action</a>
+              <a class="dropdown-item" [routerLink]="['/main/exercise']">Educate yourself</a>
+              <a class="dropdown-item" [routerLink]="['/main/dynamic']">Exercise lessons</a>
               <a class="dropdown-item" >Something else here</a>
             </div>
           </li>
+          <li class="nav-item active">
+            <a class="nav-link" [routerLink]="['/main/chatroom']">Chatroom</a>
+        </li>
       </ul>
     </div>
     <span>
         Welcome
-        {{authService.currentUserName}}
+        <a [routerLink]="['/profile']">{{authService.currentUserName}}</a>
         <button class="btn btn-large btn-danger" (click)='authService.signOut()'>Log Out</button>
     </span>
   </nav>
 <div class="container-fluid h-100%" [style.background]="colorService.backgroundColor">
-  <div class="row p-5">
+   <div class="row p-5">
     <div class="card w-100">
       <div class="row no-gutters">
         <div class="col-md-6 d-flex align-items-center">
           <div class="card-body">
-            <h3 class="card-title">Lesson #1 Fitness exercise as a Sensory Break</h3>
-            <p class="card-text">Champion Dylan, who has autism, and Coach Ashley show exercises that can be done in a classroom, at home, or in a physical education class.
-              NCHPAD (National Center on Health, Physical Activity and Disability) is the nation’s premier center in promoting the health and wellness of people with disability.</p>
+            <h3 class="card-title">Lesson #1 What is Autism?</h3>
+            <p class="card-text">This video gives you information about autism along with some of the work we do. If you would like to know more about autism head to: http://bit.ly/AboutAutism . If you wish to use this video on your website please contact us at webmanager@nas.org.uk for permission.
+              The National Autistic Society is the leading UK charity for people with autism and provides information, support and services.</p>
           </div>
         </div>
         <div class="col-md-6">
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1_SDT-a8FNM" allowfullscreen></iframe>
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/d4G0HTIUBlI" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
+    <div class="card w-100">
+      <ul *ngFor="let comment of comments1">
+        <li class="media pt-2">
+          <img src="{{comment.img}}" class="mr-3" alt="...">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1">{{comment.name}}</h5>
+           {{comment.message}}
+          </div>
+      </ul>
+      <form (ngSubmit)="addComment(1)">
+        <div class="row">
+          <div class="ml-3 col-sm-10">
+            <input type="email" name="email" class="form-control" [(ngModel)]="komentar" placeholder="Enter comment ">
+          </div>
+          <div class="col">
+            <button type="submit" class="btn btn-primary">Add comment</button>
+          </div>
+        </div>
+    </form>
+    </div>
   </div>
-  <div class="row p-5">
+<div class="row p-5">
     <div class="card w-100">
       <div class="row no-gutters">
         <div class="col-md-6 d-flex align-items-center">
           <div class="card-body">
-            <h3 class="card-title">Lesson #2 Fitness exercises to improve posture</h3>
-            <p class="card-text">Champion Anthony shares with you fitness activities that can help your children or students with autism improve their posture.
-              NCHPAD (National Center on Health, Physical Activity and Disability) is the nation’s premier center in promoting the health and wellness of people with disability.</p>
+            <h3 class="card-title">Lesson #2 What is Autism?</h3>
+            <p class="card-text">This video gives you information about autism along with some of the work we do. If you would like to know more about autism head to: http://bit.ly/AboutAutism . If you wish to use this video on your website please contact us at webmanager@nas.org.uk for permission.
+              The National Autistic Society is the leading UK charity for people with autism and provides information, support and services.</p>
           </div>
         </div>
         <div class="col-md-6">
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/orREX_55Epc" allowfullscreen></iframe>
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Lk4qs8jGN4U" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
+    <div class="card w-100">
+      <ul *ngFor="let comment of comments2">
+        <li class="media pt-2">
+          <img src="{{comment.img}}" class="mr-3" alt="...">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1">{{comment.name}}</h5>
+           {{comment.message}}
+          </div>
+      </ul>
+      <form (ngSubmit)="addComment(2)">
+        <div class="row">
+          <div class="ml-3 col-sm-10">
+            <input type="email" name="email" class="form-control" [(ngModel)]="komentar" placeholder="Enter comment ">
+          </div>
+          <div class="col">
+            <button type="submit" class="btn btn-primary">Add comment</button>
+          </div>
+        </div>
+    </form>
+    </div>
   </div>
-  <div class="row p-5">
+  <!--<div class="row p-5">
     <div class="card w-100">
       <div class="row no-gutters">
         <div class="col-md-6 d-flex align-items-center">
@@ -103,6 +146,9 @@
         </div>
       </div>
     </div>
+  </div> -->
+  <div>
+    
   </div>
 </div>
 
