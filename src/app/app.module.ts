@@ -30,6 +30,8 @@ import { ChildGuard } from './Guards/child.guard';
 import { DynamicComponent } from './Components/dynamic/dynamic.component';
 import { ChatroomComponent } from './Components/chatroom/chatroom.component';
 import { ProfileComponent } from './Components/profile/profile.component';
+import { GamesComponent } from './Components/games/games.component';
+import { LinksComponent } from './Components/links/links.component';
 
 const routes=[
   {
@@ -52,6 +54,16 @@ const routes=[
       {
         path:'',
         component:MainComponent,
+        canActivate:[AuthGuard]
+      },
+      {
+        path:'links',
+        component:LinksComponent,
+        canActivate:[AuthGuard]
+      },
+      {
+        path:'games',
+        component:GamesComponent,
         canActivate:[AuthGuard]
       },
       {
@@ -89,7 +101,9 @@ const routes=[
     LoginComponent,
     DynamicComponent,
     ChatroomComponent,
-    ProfileComponent
+    ProfileComponent,
+    GamesComponent,
+    LinksComponent
     
   ],
   imports: [

@@ -1,0 +1,110 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">AutTogether</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['/main']">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li>
+               <a class="nav-link font-weight-bold" [style.color]="colorService.backgroundColor" [cpPosition]="'bottom'" [cpPositionOffset]="'50%'"
+                [cpPositionRelativeToArrow]="true" [(colorPicker)]="colorService.backgroundColor">Change me!</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Lessons
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" [routerLink]="['/main/exercise']">Educate yourself</a>
+                    <a class="dropdown-item" [routerLink]="['/main/dynamic']"> Exercise lessons</a>
+                    <a class="dropdown-item">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['/main/chatroom']">Chatroom</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/main/games']">Games</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/main/links']">Usefull links</a>
+            </li>
+        </ul>
+    </div>
+    <div class="d-flex justify-content-right">
+        <span>
+            Welcome
+            <a [routerLink]="['/profile']">{{authService.currentUserName}}</a>
+            <button class="btn btn-large btn-danger" (click)='authService.signOut()'>Log Out</button>
+        </span>
+    </div>
+</nav>
+
+<div class="container-fluid h-100%" [style.background]="colorService.backgroundColor">
+
+    <div class="row p-5">
+        <div class="card w-100 ">
+            <div class="card-body text-align-center">
+                <h2 class="card-title text-center">Usefull & educational links</h2>
+            </div>
+        </div>
+    </div>
+
+ <div class="row p-5">
+     <div class="card w-100">
+       <div class="row no-gutters">
+         <div class="col-lg-6 d-flex align-items-center">
+           <div class="card-body">
+             <h3 class="card-title">Autism spectrum disorder</h3>
+          
+             <p class="card-text">Autism spectrum disorder (ASD) refers to a range of conditions characterised by some degree of impaired social behaviour, communication and language, and a narrow range of interests and activities that are both unique to the individual and carried out repetitively.
+
+                ASDs begin in childhood and tend to persist into adolescence and adulthood. In most cases the conditions are apparent during the first 5 years of life.</p>
+                <a href="https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders">Read more about autism spectrum disorder</a>
+           </div>
+         </div>
+         <div class="col-lg-4 offset-lg-1 align-items-left">
+             <img class="w-100" src="../../../assets/img/who.png" alt="">
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="row p-5">
+    <div class="card w-75">
+      <div class="row no-gutters">
+        <div class="col-lg-6 d-flex align-items-center">
+          <div class="card-body">
+            <h3 class="card-title">What is Autism ?</h3>
+            <p class="card-text">Autism, or autism spectrum disorder (ASD), refers to a broad range of conditions characterized by challenges with social skills, repetitive behaviors, speech and nonverbal communication. According to the Centers for Disease Control, autism affects an estimated 1 in 54 children in the United States today.</p>
+            <a href="https://www.autismspeaks.org/what-autism#:~:text=Autism%2C%20or%20autism%20spectrum%20disorder,in%20the%20United%20States%20today."  title="RUFUS GOES TO SCHOOL">Read more about What is autism </a>
+          </div>
+        </div>
+        <div class="col-lg-3 offset-lg-3 align-items-left">
+            <img class="w-100 h-100" src="../../../assets/img/speaks.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row p-5">
+    <div class="card w-100">
+      <div class="row no-gutters">
+        <div class="col-lg-6 d-flex align-items-center">
+          <div class="card-body">
+            <h3 class="card-title">Educating autistic students</h3>
+            <p class="card-text">With chronic problems like autism, health care providers all too often underestimate the commitment required by families to help their children become the best they can be. In this issue, two parents graciously share with us stories of how the whole family and the community help their children and what these special children need to grow. We are deeply grateful to these parents as their words tell the tale far more powerfully than any academic article. We hope that you, the reader, will share these pieces with parents, teachers, hockey and soccer coaches, and others in the community who help. With autism, it truly does take a village to raise a child.</p>
+            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2720496/"  title="ROBBIE THE ROBOT">Read more about education for autistic people</a>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-2 align-items-left">
+            <img class="w-100 h-100" src="../../../assets/img/nlm.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+ 
+   

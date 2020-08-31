@@ -1,0 +1,110 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">AutTogether</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['/main']">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li>
+               <a class="nav-link font-weight-bold" [style.color]="colorService.backgroundColor" [cpPosition]="'bottom'" [cpPositionOffset]="'50%'"
+                [cpPositionRelativeToArrow]="true" [(colorPicker)]="colorService.backgroundColor">Change me!</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Lessons
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" [routerLink]="['/main/exercise']">Educate yourself</a>
+                    <a class="dropdown-item" [routerLink]="['/main/dynamic']"> Exercise lessons</a>
+                    <a class="dropdown-item">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['/main/chatroom']">Chatroom</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/main/games']">Games</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/main/links']">Usefull links</a>
+            </li>
+        </ul>
+    </div>
+    <div class="d-flex justify-content-right">
+        <span>
+            Welcome
+            <a [routerLink]="['/profile']">{{authService.currentUserName}}</a>
+            <button class="btn btn-large btn-danger" (click)='authService.signOut()'>Log Out</button>
+        </span>
+    </div>
+</nav>
+<div class="container-fluid h-100%" [style.background]="colorService.backgroundColor">
+
+    <div class="row p-5">
+        <div class="card w-100">
+            <div class="card-body">
+                <h2 class="card-title">Coping with change</h2>
+                <p class="card-text">
+                   
+Ritualistic and compulsive behaviours are common for people with autism, such as lining up toys and having rigid routines for daily activities. In an attempt to cope, a person with autism will attempt to focus on what they are familiar with and may become extremely distressed if a new route is taken to school, furniture in the house is rearranged or they are asked to wear new clothes. The anxiety that is experienced by an autistic person, even as a result of the most minor change can manifest itself in the form of increased ritualistic or compulsive behaviours, shows of aggressive behaviour, verbal outbursts or withdrawal.
+                </p>
+            </div>
+        </div>
+    </div>
+
+ <div class="row p-5">
+     <div class="card w-100">
+       <div class="row no-gutters">
+         <div class="col-lg-6 d-flex align-items-center">
+           <div class="card-body">
+             <h3 class="card-title">Game #1 RON GETS DRESSED</h3>
+             <p class="card-text">The aim of the game 'Ron gets Dressed' is to improve the ability of a child with autism to cope with changes in clothing to match the weather conditions. In addition to clothing this game can be used to learn about coping with change in general and improve the child's ability to cope in situations where routine is broken. The game reinforces the following keywords that can be applied in real world situations; 'hot' and 'cold'.</p>
+             <a href="http://whizkidgames.com/?game=rongetsdressed" class="btn btn-primary" title="RON GETS DRESSED">Play Now</a>
+           </div>
+         </div>
+         <div class="col-lg-4 offset-lg-2 align-items-left">
+             <img class="w-100" src="../../../assets/img/dressing-game.PNG" alt="">
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="row p-5">
+    <div class="card w-100">
+      <div class="row no-gutters">
+        <div class="col-lg-6 d-flex align-items-center">
+          <div class="card-body">
+            <h3 class="card-title">Game #2 RUFUS GOES TO SCHOOL</h3>
+            <p class="card-text">The aim of 'Rufus goes to School' is to help children with autism cope with change. The game does this focusing on a typical school on school day and introducing changes such as driving with different people, interacting with classmates and changes to routine such as the car breaks down and Rufus and his dad needing to catch the bus to school. The game emphasizes the keywords; 'change' and 'different' and the notions that change is necessary and that change can be fun. Our aim is for parents and teachers to use these keywords to help their children accept and cope with changes in routine.</p>
+            <a href="http://www.whizkidgames.com/?game=rufusgoestoschool" class="btn btn-primary" title="RUFUS GOES TO SCHOOL">Play Now</a>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-2 align-items-left">
+            <img class="w-100 h-100" src="../../../assets/img/rufus.PNG" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row p-5">
+    <div class="card w-100">
+      <div class="row no-gutters">
+        <div class="col-lg-6 d-flex align-items-center">
+          <div class="card-body">
+            <h3 class="card-title">Game #3 ROBBIE THE ROBOT</h3>
+            <p class="card-text">Robbie the Robot helps children with autism to recognise emotions. The game integrates 3D animations and a real persons face, to communicate the emotion that the character is feeling. Robbie the Robot is a mechanical character on a journey to find his missing hat. Many autistic children find mechanical objects engaging and by combining this with a real human face the aim is for the child to practice indentifying emotions in a non-confrontational environment that they enjoy. The game reinforces the following keywords, which can be used as a tool by parents and teachers for encouraging positive behaviours in real life situations; 'happy', 'sad', 'angry', 'surprised'.</p>
+            <a href="http://www.whizkidgames.com/?game=robbie" class="btn btn-primary" title="ROBBIE THE ROBOT">Play Now</a>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-2 align-items-left">
+            <img class="w-100 h-100" src="../../../assets/img/robbie.PNG" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+ 
+   
