@@ -1,0 +1,75 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">AutTogether</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['/main']">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li>
+               <a class="nav-link font-weight-bold" [style.color]="colorService.backgroundColor" [cpPosition]="'bottom'" [cpPositionOffset]="'50%'"
+                [cpPositionRelativeToArrow]="true" [(colorPicker)]="colorService.backgroundColor">Change me!</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Lessons
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" [routerLink]="['/main/exercise']">Educate yourself</a>
+                    <a class="dropdown-item" [routerLink]="['/main/dynamic']"> Exercise lessons</a>
+                    <a class="dropdown-item">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['/main/chatroom']">Chatroom</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/main/games']">Games</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/main/links']">Usefull links</a>
+            </li>
+        </ul>
+    </div>
+    <div class="d-flex justify-content-right">
+        <span>
+            Welcome
+            <a [routerLink]="['/profile']">{{authService.currentUserName}}</a>
+            <button class="btn btn-large btn-danger" (click)='authService.signOut()'>Log Out</button>
+        </span>
+    </div>
+</nav>
+<div class="container-fluid h-100" [style.background]="colorService.backgroundColor">
+    <div class="row pt-5">
+        <div class="col-sm-4">
+            <div class="card">
+                <h4 class="card-header">Exercise lessons</h4>
+                <div class="card-body">
+                    <p class="card-text">Providing the best exercising lessons for your child.</p>
+                    <a [routerLink]="['/main/exercise']" class="btn btn-primary">Go to lessons</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <h4 class="card-header">Dynamic lessons</h4>
+                <div class="card-body">
+                    <p class="card-text">Providing the best teaching lessons for your child.</p>
+                    <a [routerLink]="['/main/dynamic']" class="btn btn-primary">Go to lessons</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <h4 class="card-header">Games</h4>
+                <div class="card-body">
+                    <p class="card-text">Providing the best games  for your child.</p>
+                    <a [routerLink]="['/main/games']" class="btn btn-primary">Go to games</a>
+                </div>
+            </div>
+        </div>
+    </div>

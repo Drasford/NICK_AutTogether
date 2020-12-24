@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { YoutubeService } from './../../services/youtube.service';
-import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
+import {ColorService} from '../../services/color.service';
+import { AngularFireAuth } from '@angular/fire/auth';
 @Component({
   selector: 'app-intro',
   templateUrl: './intro.component.html',
@@ -8,20 +8,17 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser
 })
 export class IntroComponent {
 
-  videos:any;
-  panelOpenState = false;
-  tabColor ="#ba014b"
 
-  constructor(private youtube:YoutubeService, private sanitizer:DomSanitizer) {
+  constructor(public colorService:ColorService, private afAuth:AngularFireAuth) {
+    // this.afAuth.onAuthStateChanged((user)=>{
+    //   if(user){
+    //     console.log('logiran');
+    //   }
+    //   else{
+    //     console.log('odlogiran');
+    //   }
+    // })
    }
-
-  // ngOnInit(): void {
-  //   // this.youtube.getPlaylist().subscribe((data)=>{
-  //   //   console.log(data);
-  //   //   this.videos = data.items;
-  //   });
-    
-  // }
 
 
 }

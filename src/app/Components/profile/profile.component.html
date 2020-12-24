@@ -1,0 +1,131 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">AutTogether</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['/main']">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li>
+               <a class="nav-link font-weight-bold" [style.color]="colorService.backgroundColor" [cpPosition]="'bottom'" [cpPositionOffset]="'50%'"
+                [cpPositionRelativeToArrow]="true" [(colorPicker)]="colorService.backgroundColor">Change me!</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Lessons
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" [routerLink]="['/main/exercise']">Educate yourself</a>
+                    <a class="dropdown-item" [routerLink]="['/main/dynamic']"> Exercise lessons</a>
+                    <a class="dropdown-item">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['/main/chatroom']">Chatroom</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/main/games']">Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/main/links']">Usefull links</a>
+        </li>
+        </ul>
+    </div>
+    <div class="d-flex justify-content-right">
+        <span>
+            Welcome
+            <a [routerLink]="['/profile']">{{authService.currentUserName}}</a>
+            <button class="btn btn-large btn-danger" (click)='authService.signOut()'>Log Out</button>
+        </span>
+    </div>
+</nav>
+<div class="container-fluid h-100%" [style.background]="colorService.backgroundColor">
+    <div class="row profile">
+		<div class="col-md-3">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					<img src="./../../../assets/img/python.PNG" class="img-responsive" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						{{authService.currentUserName}}
+					</div>
+					<div class="profile-usertitle-job">
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lo when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+				<!-- SIDEBAR BUTTONS -->
+				<!-- END SIDEBAR BUTTONS -->
+				<!-- SIDEBAR MENU -->
+				<div>
+                    <ul class="profile-usermenu">
+                        <li>
+                            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/>
+                                <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                              </svg>
+                            Home
+                        </li>
+                        <li>
+                            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-info" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
+                                <circle cx="8" cy="4.5" r="1"/>
+                              </svg>
+                            About
+                        </li>
+                    </ul>
+						
+				</div>  
+				<!-- END MENU -->
+			</div>
+        </div>
+		<div class="col-md-9">
+            <div class="profile-content">
+              <h2>Favorited videos</h2> 
+              <div class="row p-5">
+                <div class="card w-100">
+                  <div class="row no-gutters">
+                    <div class="col-md-6 d-flex align-items-center">
+                      <div class="card-body">
+                        <h3 class="card-title">What is Autism?</h3>
+                        <p class="card-text">This video gives you information about autism along with some of the work we do. If you would like to know more about autism head to: http://bit.ly/AboutAutism . If you wish to use this video on your website please contact us at webmanager@nas.org.uk for permission.
+                          The National Autistic Society is the leading UK charity for people with autism and provides information, support and services.</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/d4G0HTIUBlI" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="row p-5">
+                <div class="card w-100">
+                  <div class="row no-gutters">
+                    <div class="col-md-6 d-flex align-items-center">
+                      <div class="card-body">
+                        <h3 class="card-title">Autism in Children: Exercises to Help Toe Walking</h3>
+                        <p class="card-text">Coach Dave and Champion Brody demonstrate three exercises that can help your students or children with autism reduce stress on the muscles caused by repetitive toe walking.
+                            NCHPAD (National Center on Health, Physical Activity and Disability) is the nation’s premier center in promoting the health and wellness of people with disability.</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/m7Mr263sqvA" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+		</div>
+	</div>
+    </div>
